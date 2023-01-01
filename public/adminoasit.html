@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Toom Admin</title>
+  </head>
+  <body>
+    <div class="tabs buttons">
+      <button onclick="setTab('players')">Pl</button>
+      <button onclick="setTab('numbers')">NM</button>
+      <button onclick="setTab('other')">BT</button>
+    </div>
+    <div class="tab players" style="display: none"></div>
+    <div class="tab numbers buttons" style="display: none">
+      <div class="number"></div>
+      <div>
+        <button onclick="addNumber(1)">1</button>
+        <button onclick="addNumber(2)">2</button>
+        <button onclick="addNumber(3)">3</button>
+        <br />
+        <button onclick="addNumber(4)">4</button>
+        <button onclick="addNumber(5)">5</button>
+        <button onclick="addNumber(6)">6</button>
+        <br />
+        <button onclick="addNumber(7)">7</button>
+        <button onclick="addNumber(8)">8</button>
+        <button onclick="addNumber(9)">9</button>
+        <br />
+        <button onclick="clearNumber()">C</button>
+        <button onclick="addNumber(0)">0</button>
+        <button onclick="sendNumber()">SEND</button>
+      </div>
+    </div>
+    <div class="tab other buttons" style="display: none">
+      <button onclick="sendCommand('#explode')">PATLA</button>
+      <button onclick="sendCommand('#clear')">TEMIZLE</button> <br />
+      <button onclick="sendCommand('#countdown')">GERI SAYIM</button> <br />
+      <button onclick="sendCommand('#galaxy')">GALAKSI</button>
+      <button onclick="sendCommand('#ring')">HALKA</button> <br />
+      <button onclick="sendCommand('#heart')">KALP</button>
+      <button onclick="sendCommand('#pratis')">PRATIS</button>
+      <br />
+      <br />
+      <button onclick="nextState()">NEXT STATE</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="adminoasit.js"></script>
+  </body>
+</html>

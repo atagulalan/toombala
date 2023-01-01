@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Toom</title>
+  </head>
+  <div class="modal">
+    <h1>TOOM</h1>
+    <input type="text" id="name" class="name" placeholder="İsim" />
+    <button onclick="join()">Katıl</button>
+  </div>
+  <div class="new-game-modal" style="display: none">
+    <h1>BİTTİ</h1>
+    <button onclick="newCard()">Yeni Kart Al</button>
+    <button onclick="sameCard()">Aynı Kart İle Devam Et</button>
+  </div>
+  <div class="left" style="display: none">
+    <div class="name"></div>
+    <div class="score"></div>
+  </div>
+  <div class="cards"></div>
+  <body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="mobile.js"></script>
+  </body>
+</html>
